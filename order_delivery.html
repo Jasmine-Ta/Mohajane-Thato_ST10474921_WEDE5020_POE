@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Delivery Enquiries</title>
+</head>
+<body>
+<hr>
+   <header>
+        <div class="logo">
+            <h1>SUNRISE ACRES FARM</h1>
+        </div>
+        <nav>
+            <ul> 
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="About_us.html">About Us</a></li>
+            <li><a href="Products.html">Our Products</a></li>
+            <li><a href="order_delivery.html" class="active">Order /Delivery</a></li>
+            <li><a href="gallary_reviews.html">Gallery/Reviews</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<hr>
+    <main class="form-layout">
+        <section class="form-wrapper">
+            <h2>Product Request Form</h2>
+            <p> Fill out the fields below to verify stock avaliability and request a delivery qoute.</p>
+<hr>            
+            <!--Validated order form-->
+            <form id="orderForm" class="validated-form">
+                <lable for="fullNames">Full Names:</lable>
+                <input type="text" id="fullNames" name="fullNames" required placeholder="e.g. Thato Mohajane">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="Email" required placeholder="name@domain.com">
+
+                <label for="produceType">select product:</label>
+                <select id="produceType" name="produceType">
+                    <option value="vegetables">Seasonal Vegetables Package</option>
+                    <option value="livestock">Livestock</option>
+                    <option value="mixed">Mixed Bulk Order Bundle</option>
+                    <option value="eggs">Egg selection</option>
+                </select>
+
+                <label for="quantity">Requested Quantity / Weight:</label>
+                <input type="text" id="quantity" name="quantity" required placeholder="e.g.5kg, 3 crates">
+
+                <label for="deliveryMethod">Collection Method:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="transit" value="delivery" checked> Doorstep delivery</label>
+                    <label><input type="radio" name="transit" value="Collection"> Farm Deport Collections</label>
+                </div>
+
+                <label for="notes">Additional Message / Delivery Address Details:</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+
+                <button type="submit" class="btn btn-submit">Submit Enquiry</button>
+            </form>
+        </section>
+<hr>
+        <!--Sidebar information block for Delivery and Collection info-->
+        <aside class="logistics-info">
+            <h3>Delivery & Collection Arrangement</h3>
+            <p><strong>Delivery Coverage Areas:</strong>We deliver straight to households, local business, and restaurants throughout the Gauteng region.</p>
+            <p><strong>Delivery Fee:</strong>Within Gauteng for orders less than a R1000 it is R150 & orders outside Gauteng the delivery fee will be R300.</p>
+            <p><strong>Farm Depot Collections:</strong>Pre-ordered stock package can be safely retrieved directly from our farm bays by prior arrangement.</p>
+        </aside>
+    </main>
+<hr>
+  <footer>
+    <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved,|Proudly serving Gautang, South Africa.</p>
+</footer> 
+</body>
+</html>
