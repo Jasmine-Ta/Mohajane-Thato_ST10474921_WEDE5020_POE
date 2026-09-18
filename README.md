@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mohajane-Thato_ST10474921_WEDE5020_POE
 # Sunrise Acres Farm - Website Update
 
@@ -43,3 +44,6 @@ observations: navigation menu links flex horizontally across the top axis, while
 ![mobile screen layout view](_images\Laptop.png)
 
 
+=======
+# Mohajane-Thato_ST10474921_WEDE5020_POE
+>>>>>>> 135d4f2dd9ed6e353a7e1c93759c48a0e1749e9e
