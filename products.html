@@ -3,68 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Product page</title>
+    <title>Our Products - SUNRISE ACRES FARM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+        :root {
+            --primary-green: #2c5e3b;
+            --accent-green: #4caf50;
+            --earth-brown: #5c4033;
+            --light-bg: #f9f6f0;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 1.5rem 1rem 0.5rem 1rem;
+        }
+
+        .logo h1 {
+            color: var(--primary-green);
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: var(--primary-green);
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: var(--white);
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-green);
+        }
+
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('_images/Cabbage.jpg') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-green);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .hero-thumbs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-thumbs img {
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            object-fit: cover;
+        }
+
+        .Announcement {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .Announcement h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .announcement-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent-green);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .announcement-card h4 {
+            color: var(--earth-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-produce {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .featured-produce > h2 {
+            text-align: center;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .produce-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .produce-card:hover {
+            transform: translateY(-5px);
+        }
+
+.produce-card img {
+     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.product-card-item img {
+     width: 100%;             
+    height: 200px;           
+    object-fit: cover;      
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+    display: block;        
+}
+
+        .produce-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .produce-card p {
+            padding: 0 1rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+    </style>
 <body>
-<hr>
-     <header>
+    <header>
         <div class="logo">
             <h1>SUNRISE ACRES FARM</h1>
+            <h2 class="hero-tagline">Fresh | Local</h2>
         </div>
-<hr>
+
         <nav>
             <ul> 
-            <li><a href="index.html" >Home Page</a></li>
-            <li><a href="About_us.html">About Us</a></li>
-            <li><a href="Products.html"class="active">Our Products</a></li>
-            <li><a href="order_delivery.html">Order/ Delivery</a></li>
-            <li><a href="gallary_reviews.html">Gallery/Reviews</a></li>
-            <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="About_us.html">About Us</a></li>
+                <li><a href="Products.html" class="active">Our Products</a></li>
+                <li><a href="order_delivery.html">Order / Delivery</a></li>
+                <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header> 
-<hr>
-    <main class="product-container">
-        <h2>Our Seasonal Products</h2>
-        <p class="intro-text">Browse our avaliable produce options below. Ready to buy? Use our direct actions to order.</p>
+    </header>
 
-        <div class="prouct-grid">
-            <!--product 1-->
-            <div class="product-item">
-                <h3>Fresh Seasonal vegetables</h3>
-                <p>Includes farm-grown spinach, cabbage, tomatoes, root crops.</p>
-                <a href="order_delivery.html" class="btn btn-small">Order This</a>
-                <img src="_images\Cabbage.jpg" alt="Cabbage image" height="100px" width="100px">
-                <img src="_images\Spinanch.jpg" alt="spinach image" height="100px" width="100px">
-                <img src="_images\Tomatoes.jpg" alt="Tomatoes image" height="100px" width="100px">
-                <img src="_images\Root vegetables.jpg" alt="Root Vegetables image" height="100px" width="100px">
+    <main class="content-container">
+        <h2>Our Farm Fresh Products</h2>
+        <div class="products-grid">
+            <div class="product-card-item">
+                <img src="_images/Cabbage.jpg" alt="Fresh Cabbage">
+                <div class="product-info">
+                    <h3>Crisp Cabbage</h3>
+                    <p>Organically grown, nutrient-dense garden cabbages harvest fresh daily.</p>
+                    <p class="product-price">R 25.00 / each</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
+                </div>
             </div>
-<hr>
-             <!--product 2-->
-            <div class="product-item">
-                <h3>Fresh Eggs</h3>
-                <p>Includes A-Grade eggs in size Small, Medium, Large & Xtra Large.</p>
-                <a href="order_delivery.html" class="btn btn-small">Order This</a>
-                 <img src="_images\Eggs.jpg" alt="Eggs image" height="100px" width="100px">
+            <div class="product-card-item">
+                <img src="_images/Spinach.jpg" alt="Fresh Spinach">
+                <div class="product-info">
+                    <h3>Garden Spinach</h3>
+                    <p>Crisp leafy garden greens completely free of artificial chemical sprays.</p>
+                    <p class="product-price">R 20.00 / bunch</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
+                </div>
+            
+            <div class="product-card-item">
+                <img src="_images/Tomatoes.jpg" alt="Fresh Tomatoes">
+                <div class="product-info">
+                    <h3>Vine Tomatoes</h3>
+                    <p>Sweet, juicy field vine-ripened tomatoes bursting with natural flavor.</p>
+                    <p class="product-price">R 30.00 / kg</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
             </div>
-<hr>
-            <!--Product 3-->
-            <div class="product-item">
-            <h3>Livestock products</h3>
-            <p>Fresh and High-quality local livestock selections for eateries.</p>
-            <a href="order_delivery.html" class="btn btn-small">Order this</a>
-                <img src="_images\Cows.jpg" alt="Cow image" height="100px" width="100px">
-                <img src="_images\Goats.jpg" alt="Goats image" height="100px" width="100px">
-                <img src="_images\Sheeps.jpg" alt="Sheep image" height="100px" width="100px">
-                <img src="_images\Chickens.jpg" alt="Chicken image" height="100px" width="100px">
+            <div class="product-card-item">
+                <img src="_images/Goats.jpg" alt="Live Goats">
+                <div class="product-info">
+                    <h3>Live Goats</h3>
+                    <p>Healthy, grass-fed farm-raised livestock ideal for breeding or traditional ceremonies.</p>
+                    <p class="product-price">From R 1,800.00 / each</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
+                </div>
+            <div class="product-card-item">
+                <img src="_images/Eggs.jpg" alt="Farm Fresh Eggs">
+                <div class="product-info">
+                    <h3>Farm Fresh Eggs</h3>
+                    <p>Free-range country eggs gathered daily. Available in Small (S), Medium (M), and Large (L) sizes.</p>
+                    <p class="product-price">From R 55.00 / tray</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
+                </div>
+            <div class="product-card-item">
+                <img src="_images/Cows.jpg" alt="Live Cattle">
+                <div class="product-info">
+                    <h3>Live Cattle</h3>
+                    <p>Quality grass-fed cows and calves reared in open pastures, perfect for farming stock.</p>
+                    <p class="product-price">From R 7,500.00 / each</p>
+                    <a href="order_delivery.html" class="btn-action">Order Now</a>
+                </div>
             </div>
         </div>
     </main>
-<hr>
-    <!--Global Footer-->
-<footer>
-    <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved,|Proudly serving Gautang, South Africa.</p>
-</footer>
 
+    <footer>
+        <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Gauteng, South Africa.</p>
+    </footer>
 </body>
 </html>

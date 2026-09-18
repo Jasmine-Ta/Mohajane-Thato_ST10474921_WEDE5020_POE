@@ -3,74 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order & Delivery Enquiries</title>
+    <title>Order &amp; Delivery - SUNRISE ACRES FARM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+        :root {
+            --primary-green: #2c5e3b;
+            --accent-green: #4caf50;
+            --earth-brown: #5c4033;
+            --light-bg: #f9f6f0;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 1.5rem 1rem 0.5rem 1rem;
+        }
+
+        .logo h1 {
+            color: var(--primary-green);
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: var(--primary-green);
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: var(--white);
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-green);
+        }
+
+        .hero-banner {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('_images/Cabbage.jpg') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-green);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .hero-thumbs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-thumbs img {
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            object-fit: cover;
+        }
+
+        .Announcement {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .Announcement h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .announcement-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent-green);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .announcement-card h4 {
+            color: var(--earth-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-produce {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .featured-produce > h2 {
+            text-align: center;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .produce-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .produce-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .produce-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .produce-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .produce-card p {
+            padding: 0 1rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+    </style>
 <body>
-<hr>
-   <header>
+    <header>
         <div class="logo">
             <h1>SUNRISE ACRES FARM</h1>
+            <h2 class="hero-tagline">Fresh | Local</h2>
         </div>
         <nav>
             <ul> 
-            <li><a href="index.html">Home Page</a></li>
-            <li><a href="About_us.html">About Us</a></li>
-            <li><a href="Products.html">Our Products</a></li>
-            <li><a href="order_delivery.html" class="active">Order /Delivery</a></li>
-            <li><a href="gallary_reviews.html">Gallery/Reviews</a></li>
-            <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="About_us.html">About Us</a></li>
+                <li><a href="Products.html">Our Products</a></li>
+                <li><a href="order_delivery.html" class="active">Order / Delivery</a></li>
+                <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<hr>
-    <main class="form-layout">
-        <section class="form-wrapper">
-            <h2>Product Request Form</h2>
-            <p> Fill out the fields below to verify stock avaliability and request a delivery qoute.</p>
-<hr>            
-            <!--Validated order form-->
-            <form id="orderForm" class="validated-form">
-                <lable for="fullNames">Full Names:</lable>
-                <input type="text" id="fullNames" name="fullNames" required placeholder="e.g. Thato Mohajane">
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="Email" required placeholder="name@domain.com">
-
-                <label for="produceType">select product:</label>
-                <select id="produceType" name="produceType">
-                    <option value="vegetables">Seasonal Vegetables Package</option>
-                    <option value="livestock">Livestock</option>
-                    <option value="mixed">Mixed Bulk Order Bundle</option>
-                    <option value="eggs">Egg selection</option>
-                </select>
-
-                <label for="quantity">Requested Quantity / Weight:</label>
-                <input type="text" id="quantity" name="quantity" required placeholder="e.g.5kg, 3 crates">
-
-                <label for="deliveryMethod">Collection Method:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="transit" value="delivery" checked> Doorstep delivery</label>
-                    <label><input type="radio" name="transit" value="Collection"> Farm Deport Collections</label>
+    <main class="content-container">
+        <h2>Place Your Farm Order</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
                 </div>
-
-                <label for="notes">Additional Message / Delivery Address Details:</label>
-                <textarea id="notes" name="notes" rows="4"></textarea>
-
-                <button type="submit" class="btn btn-submit">Submit Enquiry</button>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+        <div class="form-group">
+            <h1><label>Select Produce Needed:</label></h1>
+        <div class="checkbox-list">
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-cabbage" name="produce" value="cabbage">
+                <label for="prod-cabbage">Crisp Cabbage</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-spinach" name="produce" value="spinach">
+                <label for="prod-spinach">Garden Spinach</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-tomatoes" name="produce" value="tomatoes">
+                <label for="prod-tomatoes">Vine Tomatoes</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-goats" name="produce" value="goats">
+                <label for="prod-goats">Live Goats</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-eggs" name="produce" value="eggs">
+                <label for="prod-eggs">Farm Fresh Eggs</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-cattles" name="produce" value="cattles">
+                <label for="prod-cattles">Live Cattles</label>
+            </div>
+        <div class="checkbox-group">
+                <input type="checkbox" id="prod-others" name="produce" value="others">
+                <label for="prod-tomatoes">Other</label>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="delivery-addr">Delivery Address</label>
+                <textarea id="delivery-addr" name="address" rows="3" required placeholder="Enter delivery details within Gauteng"></textarea>
+                </div>
+                <button type="submit" class="btn-action">Submit Order Request</button>
             </form>
-        </section>
-<hr>
-        <!--Sidebar information block for Delivery and Collection info-->
-        <aside class="logistics-info">
-            <h3>Delivery & Collection Arrangement</h3>
-            <p><strong>Delivery Coverage Areas:</strong>We deliver straight to households, local business, and restaurants throughout the Gauteng region.</p>
-            <p><strong>Delivery Fee:</strong>Within Gauteng for orders less than a R1000 it is R150 & orders outside Gauteng the delivery fee will be R300.</p>
-            <p><strong>Farm Depot Collections:</strong>Pre-ordered stock package can be safely retrieved directly from our farm bays by prior arrangement.</p>
-        </aside>
+        </div>
     </main>
-<hr>
-  <footer>
-    <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved,|Proudly serving Gautang, South Africa.</p>
-</footer> 
+
+    <footer>
+        <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Gauteng, South Africa.</p>
+    </footer>
 </body>
 </html>

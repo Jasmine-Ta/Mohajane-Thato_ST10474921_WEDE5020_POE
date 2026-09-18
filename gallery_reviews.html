@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNRISE ACRES FARM</title>
-    <style>
+    <title>Gallery &amp; Reviews - SUNRISE ACRES FARM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
         :root {
             --primary-green: #2c5e3b;
             --accent-green: #4caf50;
@@ -76,13 +78,6 @@
 
         nav a:hover, nav a.active {
             background-color: var(--accent-green);
-        }
-
-        .hero-banner {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('_images/Cabbage.jpg') center/cover no-repeat;
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 1rem;
         }
 
         .hero-content h2 {
@@ -200,16 +195,9 @@
             transform: translateY(-5px);
         }
 
-        .produce-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-
         .product-card-item img {
-            width: 100%;             
-            height: 200px;           
+            width: 80%;             
+            height: 50px;           
             object-fit: cover;      
             border-top-left-radius: 8px; 
             border-top-right-radius: 8px;
@@ -234,7 +222,6 @@
             margin-top: 4rem;
         }
     </style>
-</head>
 <body>
     <header>
         <div class="logo">
@@ -242,55 +229,54 @@
             <h2 class="hero-tagline">Fresh | Local</h2>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home Page</a></li>
+            <ul> 
+                <li><a href="index.html">Home Page</a></li>
                 <li><a href="About_us.html">About Us</a></li>
                 <li><a href="Products.html">Our Products</a></li>
                 <li><a href="order_delivery.html">Order / Delivery</a></li>
-                <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
+                <li><a href="gallery_reviews.html" class="active">Farm Gallery / Reviews</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero-banner">
-        <div class="hero-content">
-            <h2>Fresh Seasonal Vegetables.</h2>
-            <p>Affordable, High-quality local produce grown sustainably in Gauteng</p>
-            <div class="cta-buttons">
-                <a href="Products.html" class="btn btn-primary">View Product</a>
-                <a href="order_delivery.html" class="btn btn-secondary">Order Now</a>
-            </div>
-            <div class="hero-thumbs">
-                <img src="_images/Cabbage.jpg" alt="Cabbage image" height="80px" width="80px">
-                <img src="_images\Spinach.jpg" alt="Spinach image" height="80px" width="80px">
-                <img src="_images/Tomatoes.jpg" alt="Tomatoes image" height="80px" width="80px">
-                <img src="_images/Root vegetables.jpg" alt="Root Vegetables image" height="80px" width="80px">
-            </div>
+    <main class="content-container">
+        <h2>Farm Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="_images/Cabbage.jpg" alt="Cabbage Crops"></div>
+            <div class="gallery-item"><img src="_images/Spinach.jpg" alt="Spinach Fields"></div>
+            <div class="gallery-item"><img src="_images/Tomatoes.jpg"alt="Tomatoes"></div>
+            <div class="gallery-item"><img src="_images\Eggs.jpg"alt="Eggs"></div>
+            <div class="gallery-item"><img src="_images/Cows.jpg" alt="Cows"></div>
+            <div class="gallery-item"><img src="_images\Sheeps.jpg"alt="Sheep"></div>
+            <div class="gallery-item"><img src="_images\Goats.jpg"alt="Goats"></div>
+            <div class="gallery-item"><img src="_images\Chickens.jpg"alt="Chickens"></div>
+            <div class="gallery-item"><img src="_images\Harvested crops 1.jpg"alt="Crops1"></div>
+            <div class="gallery-item"><img src="_images\Harvested crops.jpg"alt="Crops"></div>
+            <div class="gallery-item"><img src="_images\Packed fresh produce 2.jpg"alt="Packed Produce 2"></div>
+            <div class="gallery-item"><img src="_images\Packed fresh produce.jpg"alt="Packed Produce"></div>
+            <div class="gallery-item"><img src="_images/Packed fresh produce 1.jpg"alt="Packed Produce 1"></div>
+            <div class="gallery-item"><img src="_images/Root vegetables.jpg"alt="Vegetables"></div>
+            <div class="gallery-item"><img src="_images\Rows of organic crops.jpg"alt="Organic Crops"></div>
+            <div class="gallery-item"><img src="_images/Rows of organic crops 2.jpg"alt="Organic Crops2"></div>
+            <div class="gallery-item"><img src="_images\What we have on our farm.jpg"alt="OurFarm"></div>
+            
         </div>
-    </section>
+     <div class="reviews-container">
+  <h2>Customer Reviews</h2> 
+  <div class="reviews-flex"> 
+    
+    <div class="review-card"> 
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"The crisp cabbage and spinach from Sunrise Acres arrive amazingly clean, fresh, and last far longer than supermarket varieties."</p> 
+      <p class="reviewer-name"><strong>- Thabo M., Johannesburg</strong></p> 
+    </div> 
 
-    <section class="Announcement">
-        <h3>Important Farm Announcement</h3>
-        <div class="announcement-card">
-            <h4>Autumn Harvest Update</h4>
-            <p>Our fresh seasonal spinach, cabbage, and farm-fresh eggs are fully stocked this week!</p>
-        </div>
-    </section>
-
-    <main class="featured-produce">
-        <h2>Featured Fresh Produce</h2>
-        <div class="grid-container">
-            <div class="produce-card">
-                <img src="_images/Spinach.jpg" alt="fresh green spinach leaves">
-                <h3>Seasonal Vegetables</h3>
-                <p>Crisp, locally grown garden greens picked fresh daily.</p>
-            </div>
-            <div class="produce-card">
-                <img src="_images/Cows.jpg" alt="farm livestock products">
-                <h3>Livestock Products</h3>
-                <p>High-quality farm eggs and premium local livestock selection.</p>
-            </div>
+    <div class="review-card"> 
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Outstanding local service! Reliable scheduled deliveries direct to our restaurant doors in Pretoria week after week."</p> 
+      <p class="reviewer-name"><strong>- Elena R., Bistro Owner</strong></p> 
+    </div>
         </div>
     </main>
 
@@ -299,4 +285,3 @@
     </footer>
 </body>
 </html>
-
