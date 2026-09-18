@@ -5,11 +5,12 @@ All systemic structural enhancements, styling additions, layout configurations, 
 17-09-10
 
 Added
-- **Unified Global Stylesheet (`style.css`):** Consolidated all styling mechanics across 5 new sub-pages (`About_us.html`, `Products.html`, `order_delivery.html`, `gallary_reviews.html`, `contact_us.html`) into a single file cache.
+- **Unified Global Stylesheet (`style.css`):** Consolidated all styling mechanics across 5 new sub-pages (`About_us.html`, `Products.html`, `order_delivery.html`, `gallery_reviews.html`, `contact_us.html`) into a single file cache.
 - **Dynamic Product Grid:** Programmed a fluid auto-fitting display layout (`.products-grid`) to gracefully align agricultural inventory product items.
 - **Form UI System (`.form-container`):** Developed clean component layouts for order intakes and message vectors using explicit focus-glow visual signals.
 - **Aspect-Ratio Photo Galleries:** Implemented structural masonry tracking blocks (`.gallery-grid`) with smooth zoom transitions (`transform: scale(1.05)`) when hovered over.
 - **Testimonial Engine:** Scaled clear customer feedback quote arrays (`.reviews-flex`) wrapped inside left-accented brand border banners.
+-**ChangeLog:** Added the changelog.md file in order to update any changes made regarding the css file
 
 Changed
 - **Navigation Multi-Mapping:** Integrated individual active navigation highlights (`class="active"`) pointing directly to active folder destinations on each individual sub-page.
